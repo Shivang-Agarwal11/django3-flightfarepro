@@ -70,8 +70,6 @@ def processing(d):
   
     actual= (round(model.predict(l)[0],2))
     
-    
-    
     def calc_for_every_flight(destination,source,airlines_dict,extra,model):
         airlines={'Air India':0, 'GoAir':0,
         'IndiGo':0, 'Jet Airways':0, 
@@ -85,125 +83,6 @@ def processing(d):
             l=np.array([[features_list]])
             airlines[i]=(round(model.predict(l)[0],2))
             airlines_dict[i]=0
-
-
-    
-    # #FOR GOAIR
-    # Airline_GoAir=1
-    # airlines['Airline_GoAir']=round(model.predict([[Destination_Cochin, Destination_Delhi, Destination_Hyderabad,
-    #    Destination_Kolkata, Source_Chennai, Source_Delhi,
-    #    Source_Kolkata,Source_Mumbai,Airline_Air_India, Airline_GoAir,
-    #    Airline_IndiGo, Airline_Jet_Airways,Airline_Jet_Airways_Business,
-    #    Airline_Multiple_carriers,
-    #    Airline_Multiple_carriers_Premium_economy,Airline_SpiceJet,
-    #    Airline_Trujet,Airline_Vistara,Airline_Vistara_Premium_economy,
-    #    no_of_stops, dur_h, dur_m, day,
-    #    month, dep_h, dep_m, arr_h,
-    #    arr_m]])[0],2)
-    
-    # #FOR AIRINDIA
-    # Airline_Air_India=1
-    # Airline_GoAir=0
-    # airlines['Airline_AirIndia']=round(model.predict([[Destination_Cochin, Destination_Delhi, Destination_Hyderabad,
-    #    Destination_Kolkata, Source_Chennai, Source_Delhi,
-    #    Source_Kolkata,Source_Mumbai,Airline_Air_India, Airline_GoAir,
-    #    Airline_IndiGo, Airline_Jet_Airways,Airline_Jet_Airways_Business,
-    #    Airline_Multiple_carriers,
-    #    Airline_Multiple_carriers_Premium_economy,Airline_SpiceJet,
-    #    Airline_Trujet,Airline_Vistara,Airline_Vistara_Premium_economy,
-    #    no_of_stops, dur_h, dur_m, day,
-    #    month, dep_h, dep_m, arr_h,
-    #    arr_m]])[0],2)
-    
-    
-    
-    # #FOR INDIGO
-    # Airline_Air_India=0
-    # Airline_GoAir=0
-    # Airline_IndiGo=1
-    # airlines['Airline_IndiGo']=round(model.predict([[Destination_Cochin, Destination_Delhi, Destination_Hyderabad,
-    #    Destination_Kolkata, Source_Chennai, Source_Delhi,
-    #    Source_Kolkata,Source_Mumbai,Airline_Air_India, Airline_GoAir,
-    #    Airline_IndiGo, Airline_Jet_Airways,Airline_Jet_Airways_Business,
-    #    Airline_Multiple_carriers,
-    #    Airline_Multiple_carriers_Premium_economy,Airline_SpiceJet,
-    #    Airline_Trujet,Airline_Vistara,Airline_Vistara_Premium_economy,
-    #    no_of_stops, dur_h, dur_m, day,
-    #    month, dep_h, dep_m, arr_h,
-    #    arr_m]])[0],2)
-    
-    
-    # #FOR JETAIRWAYS
-    # Airline_Air_India=0
-    # Airline_GoAir=0
-    # Airline_IndiGo=0
-    # Airline_Jet_Airways=1
-    # airlines['Airline_JetAirways']=round(model.predict([[Destination_Cochin, Destination_Delhi, Destination_Hyderabad,
-    #    Destination_Kolkata, Source_Chennai, Source_Delhi,
-    #    Source_Kolkata,Source_Mumbai,Airline_Air_India, Airline_GoAir,
-    #    Airline_IndiGo, Airline_Jet_Airways,Airline_Jet_Airways_Business,
-    #    Airline_Multiple_carriers,
-    #    Airline_Multiple_carriers_Premium_economy,Airline_SpiceJet,
-    #    Airline_Trujet,Airline_Vistara,Airline_Vistara_Premium_economy,
-    #    no_of_stops, dur_h, dur_m, day,
-    #    month, dep_h, dep_m, arr_h,
-    #    arr_m]])[0],2)
-    
-    # #FOR SPICJET
-    # Airline_Air_India=0
-    # Airline_GoAir=0
-    # Airline_IndiGo=0
-    # Airline_Jet_Airways=0
-    # Airline_SpiceJet=1
-    # airlines['Airline_SpiceJet']=round(model.predict([[Destination_Cochin, Destination_Delhi, Destination_Hyderabad,
-    #    Destination_Kolkata, Source_Chennai, Source_Delhi,
-    #    Source_Kolkata,Source_Mumbai,Airline_Air_India, Airline_GoAir,
-    #    Airline_IndiGo, Airline_Jet_Airways,Airline_Jet_Airways_Business,
-    #    Airline_Multiple_carriers,
-    #    Airline_Multiple_carriers_Premium_economy,Airline_SpiceJet,
-    #    Airline_Trujet,Airline_Vistara,Airline_Vistara_Premium_economy,
-    #    no_of_stops, dur_h, dur_m, day,
-    #    month, dep_h, dep_m, arr_h,
-    #    arr_m]])[0],2)
-    
-    
-    # #FOR TRUJET
-    # Airline_Air_India=0
-    # Airline_GoAir=0
-    # Airline_IndiGo=0
-    # Airline_Jet_Airways=0
-    # Airline_SpiceJet=0
-    # Airline_Trujet=1
-    # airlines['Airline_Trujet']=round(model.predict([[Destination_Cochin, Destination_Delhi, Destination_Hyderabad,
-    #    Destination_Kolkata, Source_Chennai, Source_Delhi,
-    #    Source_Kolkata,Source_Mumbai,Airline_Air_India, Airline_GoAir,
-    #    Airline_IndiGo, Airline_Jet_Airways,Airline_Jet_Airways_Business,
-    #    Airline_Multiple_carriers,
-    #    Airline_Multiple_carriers_Premium_economy,Airline_SpiceJet,
-    #    Airline_Trujet,Airline_Vistara,Airline_Vistara_Premium_economy,
-    #    no_of_stops, dur_h, dur_m, day,
-    #    month, dep_h, dep_m, arr_h,
-    #    arr_m]])[0],2)
-    
-    
-    # #FOR VISTARA
-    # Airline_Air_India=0
-    # Airline_GoAir=0
-    # Airline_IndiGo=0
-    # Airline_Jet_Airways=0
-    # Airline_SpiceJet=0
-    # Airline_Trujet=0
-    # Airline_Vistara=1
-    # airlines['Airline_Vistara']=round(model.predict([[Destination_Cochin, Destination_Delhi, Destination_Hyderabad,
-    #    Destination_Kolkata, Source_Chennai, Source_Delhi,
-    #    Source_Kolkata,Source_Mumbai,Airline_Air_India, Airline_GoAir,
-    #    Airline_IndiGo, Airline_Jet_Airways,Airline_Jet_Airways_Business,
-    #    Airline_Multiple_carriers,
-    #    Airline_Multiple_carriers_Premium_economy,Airline_SpiceJet,
-    #    Airline_Trujet,Airline_Vistara,Airline_Vistara_Premium_economy,
-    #    no_of_stops, dur_h, dur_m, day,
-    #    month, dep_h, dep_m, arr_h,
-    #    arr_m]])[0],2)
     airlines=calc_for_every_flight(destination,source,airlines_dict,[no_of_stops,dur_h,dur_m,day,month,dep_h,dep_m,arr_h,arr_m],model)
     airlines['actual']=actual
     return airlines
